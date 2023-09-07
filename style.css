@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Остальной код */
+
+h1 {
+    width: 500px;
+    color: brown;
+    
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+h1::before {
+    content: 'Hello';
+    font-size: 40px;
+    color: orange;
+
+    transition-property: color;
+    transition-duration: 5000ms;
+    
+}
+
+h1:hover::before {
+    /* color: green; */
+    animation-name: changeColor;
+    animation-duration: 3000ms;
+}
+    @keyframes changeColor {
+            0% {
+                color: teal;
+            }
+    
+            50% {
+               color: orange;
+            }
+    
+            100% {
+                color: deepskyblue;
+            }
+        }
+    
